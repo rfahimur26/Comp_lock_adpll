@@ -1,0 +1,100 @@
+Command: vcs tb.v pll_connected.v dco_decoder.v scan_module_adpll.v bist_scan.v scan_cell.v \
+clk_count_compare.v ./vco.v adpll_controller.v computational.v traditional.v choice1_PFD_TDC.v \
+top_level_mux2_1.v bist.v choice2_PFD_backup_TDC.v choice3_standalone_PFD.v -R +memcbk \
+-l comp.log -debug_pp -o simv +v2k +lint -sverilog +define+initial_N=24 -full64 -timescale=10ns/100fs \
+
+                         Chronologic VCS (TM)
+         Version H-2013.06_Full64 -- Sat May 11 07:43:59 2019
+               Copyright (c) 1991-2013 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file 'tb.v'
+Parsing included file 'scan_tasks.v'.
+Back to file 'tb.v'.
+Parsing design file 'pll_connected.v'
+Parsing design file 'dco_decoder.v'
+Parsing design file 'scan_module_adpll.v'
+Parsing design file 'bist_scan.v'
+Parsing design file 'scan_cell.v'
+Parsing design file 'clk_count_compare.v'
+Parsing design file './vco.v'
+Parsing design file 'adpll_controller.v'
+Parsing design file 'computational.v'
+Parsing design file 'traditional.v'
+Parsing design file 'choice1_PFD_TDC.v'
+Parsing design file 'top_level_mux2_1.v'
+Parsing design file 'bist.v'
+Parsing design file 'choice2_PFD_backup_TDC.v'
+Parsing design file 'choice3_standalone_PFD.v'
+Top Level Modules:
+       tb
+TimeScale is 10 ns / 100 fs
+
+Warning-[TFIPC] Too few instance port connections
+  The following instance has fewer port connections than the module definition
+  "adpll_controller.v", 730: traditional traditional1( .output_changing_edge 
+  (traditional_fine_done_retimed),  .reset2 (reset2),  .reset3 (reset3),  
+  .early (early),  .pll_divider2_finite  ...
+  
+
+
+Warning-[IWNF] Implicit wire has no fanin
+tb.v, 933
+  Implicit wire 'ref_clk_internal' does not have any driver, please make sure 
+  this is intended.
+
+
+Warning-[IWNF] Implicit wire has no fanin
+tb.v, 1025
+  Implicit wire 'delay_gen1' does not have any driver, please make sure this 
+  is intended.
+
+
+Warning-[IWNF] Implicit wire has no fanin
+tb.v, 1026
+  Implicit wire 'delay_gen2' does not have any driver, please make sure this 
+  is intended.
+
+Starting vcs inline pass...
+12 modules and 0 UDP read.
+recompiling module tb
+recompiling module pll_connected
+recompiling module dco_decoder
+recompiling module scan_cell
+recompiling module vco_ideal
+recompiling module adpll_controller
+recompiling module choice1_PFD_TDC
+recompiling module top_level_mux2_1
+recompiling module bist
+recompiling module choice2_PFD_backup_TDC
+recompiling module choice3_standalone_PFD
+All of 12 modules done
+make[1]: Entering directory `/home/fahimr/ADPLL_bitbucket/comp_lock_PLL/csrc'
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv     -Wl,-whole-archive    -Wl,-no-whole-archive  _vcsobj_1_1.o  5NrI_d.o \
+5NrIB_d.o SIM_l.o     rmapats_mop.o rmapats.o       /home/lab.apps/vlsiapps/vcs/current/amd64/lib/libzerosoft_rt_stubs.so \
+/home/lab.apps/vlsiapps/vcs/current/amd64/lib/libvirsim.so /home/lab.apps/vlsiapps/vcs/current/amd64/lib/liberrorinf.so \
+/home/lab.apps/vlsiapps/vcs/current/amd64/lib/libsnpsmalloc.so     /home/lab.apps/vlsiapps/vcs/current/amd64/lib/libvcsnew.so \
+/home/lab.apps/vlsiapps/vcs/current/amd64/lib/libvcsucli.so /home/lab.apps/vlsiapps/vcs/current/amd64/lib/libuclinative.so \
+/home/lab.apps/vlsiapps/vcs/current/amd64/lib/vcs_save_restore_new.o -ldl -lm  -lc \
+-lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/fahimr/ADPLL_bitbucket/comp_lock_PLL/csrc'
+Command: ./simv +memcbk -a comp.log +v2k +lint +define+initial_N=24
+Chronologic VCS simulator copyright 1991-2013
+Contains Synopsys proprietary information.
+Compiler version H-2013.06_Full64; Runtime version H-2013.06_Full64;  May 11 07:44 2019
+VCD+ Writer H-2013.06_Full64 Copyright (c) 1991-2013 by Synopsys Inc.
+Interrupt at time 13473787
+
+
+ 
+Received SIGHUP (signal 1), exiting.
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1347378700 fs
+CPU Time:      3.490 seconds;       Data structure size:   2.4Mb
+Sat May 11 07:44:13 2019

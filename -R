@@ -1,0 +1,241 @@
+Command: vcs -ad=vcsAD.init tb.v pll_connected.v dco_decoder.v scan_module_adpll.v \
+scan_cell.v ./adpll2.v clk_count_compare.v ./vco.v tdc_ro.v loop_filter.v computational.v \
+traditional.v choice1_PFD_TDC.v bist.v choice2_PFD_backup_TDC.v choice3_standalone_PFD.v \
+-l -R +memcbk comp.log -debug_pp -o simv +v2k +lint -sverilog +define+initial_N=24 \
+-full64 -timescale=10ns/100fs
+                         Chronologic VCS (TM)
+         Version H-2013.06_Full64 -- Fri May  6 19:00:47 2016
+               Copyright (c) 1991-2013 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+
+Warning-[UNK_COMP_ARG] Unknown compile time plus argument used
+  Unknown compile time plus argument 'lint' is ignored.
+
+ + use `+plusarg_save' to bind in runtime plusargs;
+ + use `+plusarg_ignore' to suppress this message.
+  TIMESTAMP: Aug 14 2013 19:01:19
+
+
+  TIMESTAMP: Aug 14 2013 19:01:19
+
+   VCS_HOME: /vaps/vcs/current
+   VCS_ARCH: amd64
+   XA_HOME: /home/lab.apps/vlsiapps/xa/H-2013.03-SP2
+   XA_ARCH: amd64
+WORKING-DIR: vlsi027.ee.washington.edu:/home/fahimr/pll_project/pll_connected
+
+Begin Analog Netlist Compilation ...
+
+***** Warning: Netlist compilation will be case insensitive.
+      All letters will be converted to lower case.
+      Using "set_sim_case -case lower|upper|sensitive" in 'cfg' file to set a case.
+
+
+Begin Digital Netlist Compilation ...
+
+***** Warning: On line "5" of mixed-signal control file "vcsAD.init"
+               subckt " ro_schematic " cannot be found in analog netlist.
+               This command will be ignored.
+***** Warning: On line "9" of mixed-signal control file "vcsAD.init"
+               subckt " pd_pulse " cannot be found in analog netlist.
+               This command will be ignored.
+***** Warning: On line "10" of mixed-signal control file "vcsAD.init"
+               subckt " tdc_ro " cannot be found in analog netlist.
+               This command will be ignored.
+Parsing design file 'tb.v'
+Parsing design file 'pll_connected.v'
+Parsing design file 'dco_decoder.v'
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+dco_decoder.v, 116
+  Redeclaration of ANSI ports not allowed for 'logic1', this will be an error 
+  in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+dco_decoder.v, 116
+  Redeclaration of ANSI ports not allowed for 'logic2', this will be an error 
+  in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+dco_decoder.v, 116
+  Redeclaration of ANSI ports not allowed for 'logic3', this will be an error 
+  in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+dco_decoder.v, 117
+  Redeclaration of ANSI ports not allowed for 'vco_flopping_edge', this will 
+  be an error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+dco_decoder.v, 121
+  Redeclaration of ANSI ports not allowed for 'dsm_output', this will be an 
+  error in a future release
+
+Parsing design file 'scan_module_adpll.v'
+Parsing design file 'scan_cell.v'
+Parsing design file './adpll2.v'
+Parsing design file 'clk_count_compare.v'
+Parsing design file './vco.v'
+Parsing design file 'tdc_ro.v'
+Parsing design file 'loop_filter.v'
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+loop_filter.v, 109
+  Redeclaration of ANSI ports not allowed for 'fine_done', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+loop_filter.v, 113
+  Redeclaration of ANSI ports not allowed for 'freq_counter_pre', this will be
+  an error in a future release
+
+
+Warning-[IPDW] Identifier previously declared
+loop_filter.v, 116
+  Second declaration for identifier 'lowbw1' ignored
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+loop_filter.v, 126
+  Redeclaration of ANSI ports not allowed for 'filter_output_finite', this 
+  will be an error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+loop_filter.v, 130
+  Redeclaration of ANSI ports not allowed for 
+  'computational_fine_done_retimed_pre', this will be an error in a future 
+  release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+loop_filter.v, 133
+  Redeclaration of ANSI ports not allowed for 
+  'traditional_fine_done_retimed_pre', this will be an error in a future 
+  release
+
+
+Warning-[IPDW] Identifier previously declared
+loop_filter.v, 604
+  Second declaration for identifier 'logic1' ignored
+
+
+Warning-[IPDW] Identifier previously declared
+loop_filter.v, 604
+  Second declaration for identifier 'logic2' ignored
+
+
+Warning-[IPDW] Identifier previously declared
+loop_filter.v, 604
+  Second declaration for identifier 'logic3' ignored
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+loop_filter.v, 682
+  Redeclaration of ANSI ports not allowed for 'dco_change_edge', this will be 
+  an error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+loop_filter.v, 682
+  Redeclaration of ANSI ports not allowed for 'phase_jolt_given', this will be
+  an error in a future release
+
+Parsing design file 'computational.v'
+
+Warning-[IPDW] Identifier previously declared
+computational.v, 54
+  Second declaration for identifier 'status' ignored
+
+
+Warning-[IPDW] Identifier previously declared
+computational.v, 55
+  Second declaration for identifier 'next_status' ignored
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+computational.v, 103
+  Redeclaration of ANSI ports not allowed for 'dco_change_edge', this will be 
+  an error in a future release
+
+
+Warning-[IPDW] Identifier previously declared
+computational.v, 148
+  Second declaration for identifier 'corrected_error_for_update' ignored
+
+
+Warning-[IPDW] Identifier previously declared
+computational.v, 154
+  Second declaration for identifier 'update' ignored
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+computational.v, 166
+  Redeclaration of ANSI ports not allowed for 
+  'filter_output_computational_finite', this will be an error in a future 
+  release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+computational.v, 169
+  Redeclaration of ANSI ports not allowed for 'phase_jolt_given', this will be
+  an error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+computational.v, 181
+  Redeclaration of ANSI ports not allowed for 'cycle_left', this will be an 
+  error in a future release
+
+
+Warning-[IPDW] Identifier previously declared
+computational.v, 189
+  Second declaration for identifier 'period_change_finite' ignored
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+computational.v, 192
+  Redeclaration of ANSI ports not allowed for 'fine_done_with_reset', this 
+  will be an error in a future release
+
+Parsing design file 'traditional.v'
+
+Warning-[IPDW] Identifier previously declared
+traditional.v, 52
+  Second declaration for identifier 'count_signed2' ignored
+
+
+Warning-[IPDW] Identifier previously declared
+traditional.v, 71
+  Second declaration for identifier 'count_aggr2' ignored
+
+Parsing design file 'choice1_PFD_TDC.v'
+Parsing design file 'bist.v'
+
+Warning-[IPDW] Identifier previously declared
+bist.v, 49
+  Second declaration for identifier 'new_div_ratio_latched' ignored
+
+Parsing design file 'choice2_PFD_backup_TDC.v'
+Parsing design file 'choice3_standalone_PFD.v'
+Parsing design file 'comp.log'
+
+Error-[SE] Syntax error
+  Following verilog source has syntax error :
+  "comp.log", 1: token is 'vcs'
+  Command: vcs -ad=vcsAD.init tb.v pll_connected.v dco_decoder.v 
+  scan_module_adpll.v \
+              ^
+
+30 warnings
+1 error

@@ -1,0 +1,6 @@
+10
+-84257312
+simv.daidir/pd_pulse_topwrapper.v 
++v2k -realport -full64 -vlib simv.daidir/spicelib simv.daidir/pd_pulse_topwrapper.v -l simv.daidir/pd_pulse_topwrapper.v.log -sverilog -q
+   /vaps/vcs/current/amd64/bin/vcs1 -Mcc=gcc -Mcplusplus=g++ -Masflags= -Mcfl=' -pipe -O -I/vaps/vcs/current/include ' -Mldflags=" " -Mout=simv -Mamsrun="" -Mvcsaceobjs="" -Mobjects=" " -Msaverestoreobj= -Mcrt0="" -Mcrtn="" -Mcsrc="" -Msyslibs="-ldl "
+-Xvlogan=0x1 +v2k -realport -full64  -outdir=simv.daidir/spicelib   -l simv.daidir/pd_pulse_topwrapper.v.log -sverilog -q    
